@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Realtime Collaborative Whiteboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+<header>
+
+<h1>🎨 Realtime Whiteboard</h1>
+
+<p>Draw together instantly using Socket.IO</p>
+
+</header>
+
+<div class="toolbar glass">
+
+<div class="left-tools">
+
+<div class="tool">
+
+<label>Color</label>
+
+<input type="color" id="colorPicker" value="#2563eb">
+
+</div>
+
+<div class="tool">
+
+<label>Brush Size</label>
+
+<input
+type="range"
+id="brushSize"
+min="2"
+max="30"
+value="5">
+
+</div>
+
+<div class="tool">
+
+<label>Users</label>
+
+<div id="userCount">1</div>
+
+</div>
+
+</div>
+
+<div class="right-tools">
+
+<button id="penBtn">🖊 Pen</button>
+
+<button id="eraserBtn">🧽 Eraser</button>
+
+<button id="undoBtn">↩ Undo</button>
+
+<button id="clearBtn">🗑 Clear</button>
+
+<button id="downloadBtn">⬇ Download</button>
+
+</div>
+
+</div>
+
+<div class="board glass">
+
+<canvas id="canvas"></canvas>
+
+</div>
+
+<footer>
+
+Made with ❤️ using Node.js, Express & Socket.IO
+
+</footer>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
